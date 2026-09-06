@@ -22,20 +22,10 @@ database — using nothing but your own computer.
 
 **Local-first. No account. No cloud. No telemetry.**
 
+![OpenUnlock demo: converting a ChatGPT export into readable Markdown and validating it](./docs/media/demo.gif)
+
 ```bash
 npx openunlock convert my-chatgpt-export.zip
-```
-
-```
-Detecting source...
-Source: ChatGPT (98% confidence)
-
-Parsing and writing output...
-✓ 231 conversations
-✓ 4,872 messages
-✓ 19 attachments
-
-Output: ./openunlock-output
 ```
 
 ---
