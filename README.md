@@ -2,13 +2,13 @@
 
 **Your data should survive the SaaS that created it.**
 
-[![CI](https://github.com/TaueIkumi/openunlock/actions/workflows/ci.yml/badge.svg)](https://github.com/TaueIkumi/openunlock/actions/workflows/ci.yml)
+[![CI](https://github.com/TaueIkumi/OpenUnlock/actions/workflows/ci.yml/badge.svg)](https://github.com/TaueIkumi/OpenUnlock/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/openunlock.svg)](https://www.npmjs.com/package/openunlock)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
-[![GitHub stars](https://img.shields.io/github/stars/TaueIkumi/openunlock?style=social)](https://github.com/TaueIkumi/openunlock/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/TaueIkumi/OpenUnlock?style=social)](https://github.com/TaueIkumi/OpenUnlock/stargazers)
 
 Almost every app has an "export my data" button — ChatGPT, Notion, Slack,
 Google, and dozens more. What comes out is usually a folder of confusing
@@ -71,7 +71,7 @@ openunlock convert export.zip
 ### Running from source
 
 ```bash
-git clone https://github.com/TaueIkumi/openunlock.git && cd openunlock
+git clone https://github.com/TaueIkumi/OpenUnlock.git && cd OpenUnlock
 pnpm install
 pnpm dev -- convert export.zip
 ```
@@ -132,7 +132,7 @@ fixtures must be synthetic (never real private exports).
 If OpenUnlock is useful to you, a star helps other people find it — and
 genuinely helps prioritize what gets built next.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=TaueIkumi/openunlock&type=Date)](https://star-history.com/#TaueIkumi/openunlock&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=TaueIkumi/OpenUnlock&type=Date)](https://star-history.com/#TaueIkumi/OpenUnlock&Date)
 
 ## License
 

@@ -4,13 +4,13 @@
   "description": "Universal import/export infrastructure for SaaS data. FFmpeg for SaaS exports.",
   "license": "MIT",
   "author": "Ikumi Taue",
-  "homepage": "https://github.com/TaueIkumi/openunlock#readme",
+  "homepage": "https://github.com/TaueIkumi/OpenUnlock#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TaueIkumi/openunlock.git"
+    "url": "git+https://github.com/TaueIkumi/OpenUnlock.git"
   },
   "bugs": {
-    "url": "https://github.com/TaueIkumi/openunlock/issues"
+    "url": "https://github.com/TaueIkumi/OpenUnlock/issues"
   },
   "keywords": [
     "data-portability",
