@@ -1,0 +1,183 @@
+[
+  {
+    "id": "trello:collection:list1",
+    "title": "To Do",
+    "source": {
+      "service": "trello",
+      "sourceId": "list1"
+    },
+    "metadata": {
+      "trello": {
+        "closed": false
+      }
+    },
+    "type": "collection",
+    "parentId": "trello:workspace:board1"
+  },
+  {
+    "id": "trello:collection:list2",
+    "title": "Done",
+    "source": {
+      "service": "trello",
+      "sourceId": "list2"
+    },
+    "metadata": {
+      "trello": {
+        "closed": false
+      }
+    },
+    "type": "collection",
+    "parentId": "trello:workspace:board1"
+  },
+  {
+    "id": "trello:document:card1",
+    "title": "Design onboarding flow",
+    "updatedAt": "2024-01-14T09:00:00.000Z",
+    "source": {
+      "service": "trello",
+      "sourceId": "card1",
+      "sourcePath": "https://trello.com/c/card1"
+    },
+    "metadata": {
+      "trello": {
+        "closed": false,
+        "due": null,
+        "labels": [
+          "design"
+        ],
+        "idMembers": [
+          "member1"
+        ]
+      }
+    },
+    "type": "document",
+    "content": "Sketch the new user onboarding.\n\n**Steps**\n- [x] Wireframes\n- [ ] Review with team",
+    "format": "markdown",
+    "parentId": "trello:collection:list1"
+  },
+  {
+    "id": "trello:document:card2",
+    "title": "Ship v1",
+    "updatedAt": "2024-01-16T12:00:00.000Z",
+    "source": {
+      "service": "trello",
+      "sourceId": "card2",
+      "sourcePath": "https://trello.com/c/card2"
+    },
+    "metadata": {
+      "trello": {
+        "closed": false,
+        "due": "2024-02-01T00:00:00.000Z",
+        "labels": [],
+        "idMembers": [
+          "member1",
+          "member2"
+        ]
+      }
+    },
+    "type": "document",
+    "content": "",
+    "format": "markdown",
+    "parentId": "trello:collection:list2"
+  },
+  {
+    "id": "trello:message:action1",
+    "createdAt": "2024-01-14T10:00:00.000Z",
+    "source": {
+      "service": "trello",
+      "sourceId": "action1"
+    },
+    "metadata": {
+      "trello": {
+        "actionType": "commentCard"
+      }
+    },
+    "type": "message",
+    "authorId": "trello:person:member2",
+    "content": "Looks great!"
+  },
+  {
+    "id": "trello:person:member1",
+    "source": {
+      "service": "trello",
+      "sourceId": "member1"
+    },
+    "metadata": {
+      "trello": {
+        "username": "alice"
+      }
+    },
+    "type": "person",
+    "displayName": "Alice Doe"
+  },
+  {
+    "id": "trello:person:member2",
+    "source": {
+      "service": "trello",
+      "sourceId": "member2"
+    },
+    "metadata": {
+      "trello": {
+        "username": "bob"
+      }
+    },
+    "type": "person",
+    "displayName": "Bob Smith"
+  },
+  {
+    "id": "trello:relation:assigned-to:trello:document:card1:trello:person:member1",
+    "source": {
+      "service": "trello"
+    },
+    "type": "relation",
+    "fromId": "trello:document:card1",
+    "toId": "trello:person:member1",
+    "relationKind": "assigned-to"
+  },
+  {
+    "id": "trello:relation:assigned-to:trello:document:card2:trello:person:member1",
+    "source": {
+      "service": "trello"
+    },
+    "type": "relation",
+    "fromId": "trello:document:card2",
+    "toId": "trello:person:member1",
+    "relationKind": "assigned-to"
+  },
+  {
+    "id": "trello:relation:assigned-to:trello:document:card2:trello:person:member2",
+    "source": {
+      "service": "trello"
+    },
+    "type": "relation",
+    "fromId": "trello:document:card2",
+    "toId": "trello:person:member2",
+    "relationKind": "assigned-to"
+  },
+  {
+    "id": "trello:relation:comment-on:trello:message:action1:trello:document:card1",
+    "source": {
+      "service": "trello"
+    },
+    "type": "relation",
+    "fromId": "trello:message:action1",
+    "toId": "trello:document:card1",
+    "relationKind": "comment-on"
+  },
+  {
+    "id": "trello:workspace:board1",
+    "title": "Product Roadmap",
+    "source": {
+      "service": "trello",
+      "sourceId": "board1"
+    },
+    "metadata": {
+      "trello": {
+        "desc": "Board description",
+        "closed": false,
+        "url": "https://trello.com/b/board1/product-roadmap"
+      }
+    },
+    "type": "workspace"
+  }
+]

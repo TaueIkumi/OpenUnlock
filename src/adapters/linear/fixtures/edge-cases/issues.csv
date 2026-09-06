@@ -1,0 +1,4 @@
+ID,Title,Description,Status,Assignee,Team,Created,Parent issue,URL
+ENG-1,Has a dangling parent,Body text,Todo,Alice,Engineering,2024-01-01T00:00:00.000Z,ENG-999,https://linear.app/acme/issue/ENG-1
+ENG-2,Has a bad timestamp,Body text,Todo,,Engineering,not-a-date,,https://linear.app/acme/issue/ENG-2
+,Missing id row,Body text,Todo,,Engineering,2024-01-01T00:00:00.000Z,,https://linear.app/acme/issue/none

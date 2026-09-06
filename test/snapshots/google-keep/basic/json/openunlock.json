@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1",
+  "openunlockVersion": "0.1.0",
+  "source": "google-keep",
+  "entityCounts": {
+    "attachment": 1,
+    "document": 2
+  }
+}

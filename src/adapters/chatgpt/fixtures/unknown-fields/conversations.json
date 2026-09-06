@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Future export format",
+    "create_time": 1700300000,
+    "update_time": 1700300060,
+    "conversation_id": "44444444-4444-4444-4444-444444444444",
+    "id": "44444444-4444-4444-4444-444444444444",
+    "current_node": "node-1",
+    "plugin_ids": null,
+    "conversation_template_id": "future-template",
+    "gizmo_id": null,
+    "mapping": {
+      "node-root": {
+        "id": "node-root",
+        "message": null,
+        "parent": null,
+        "children": ["node-1"]
+      },
+      "node-1": {
+        "id": "node-1",
+        "message": {
+          "id": "msg-1",
+          "author": { "role": "user", "name": null },
+          "create_time": 1700300000,
+          "content": { "content_type": "text", "parts": ["Hello from the future"] },
+          "status": "finished_successfully",
+          "metadata": { "future_field": "some-new-vendor-data" }
+        },
+        "parent": "node-root",
+        "children": []
+      }
+    }
+  }
+]

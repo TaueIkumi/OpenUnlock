@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Two possible answers",
+    "create_time": 1700100000,
+    "update_time": 1700100200,
+    "conversation_id": "22222222-2222-2222-2222-222222222222",
+    "id": "22222222-2222-2222-2222-222222222222",
+    "current_node": "node-b",
+    "mapping": {
+      "node-root": {
+        "id": "node-root",
+        "message": null,
+        "parent": null,
+        "children": ["node-q"]
+      },
+      "node-q": {
+        "id": "node-q",
+        "message": {
+          "id": "msg-q",
+          "author": { "role": "user", "name": null },
+          "create_time": 1700100000,
+          "content": { "content_type": "text", "parts": ["Give me a name for my cat"] },
+          "status": "finished_successfully"
+        },
+        "parent": "node-root",
+        "children": ["node-a", "node-b"]
+      },
+      "node-a": {
+        "id": "node-a",
+        "message": {
+          "id": "msg-a",
+          "author": { "role": "assistant", "name": null },
+          "create_time": 1700100060,
+          "content": { "content_type": "text", "parts": ["How about Whiskers?"] },
+          "status": "finished_successfully"
+        },
+        "parent": "node-q",
+        "children": []
+      },
+      "node-b": {
+        "id": "node-b",
+        "message": {
+          "id": "msg-b",
+          "author": { "role": "assistant", "name": null },
+          "create_time": 1700100090,
+          "content": { "content_type": "text", "parts": ["How about Mochi?"] },
+          "status": "finished_successfully"
+        },
+        "parent": "node-q",
+        "children": []
+      }
+    }
+  }
+]

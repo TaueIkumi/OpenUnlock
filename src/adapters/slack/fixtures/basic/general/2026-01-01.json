@@ -1,0 +1,14 @@
+[
+  {
+    "type": "message",
+    "user": "U001",
+    "text": "Hey <@U002>, did you see the new deploy?",
+    "ts": "1767225600.000100"
+  },
+  {
+    "type": "message",
+    "user": "U002",
+    "text": "Yes, looks good! Check <#C001|general> for updates.",
+    "ts": "1767225660.000200"
+  }
+]

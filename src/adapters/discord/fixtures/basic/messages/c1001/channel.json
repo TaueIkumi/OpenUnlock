@@ -1,0 +1,6 @@
+{
+  "id": "1001",
+  "type": 0,
+  "name": "general",
+  "guild": { "id": "g1", "name": "My Server" }
+}

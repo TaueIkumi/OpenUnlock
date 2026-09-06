@@ -1,0 +1,64 @@
+[
+  {
+    "id": "google-keep:attachment:6446c0a4",
+    "source": {
+      "service": "google-keep",
+      "sourcePath": "photo.jpg"
+    },
+    "type": "attachment",
+    "filename": "photo.jpg",
+    "mediaType": "image/jpeg",
+    "size": 68,
+    "checksum": "431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460",
+    "localPath": "attachments/6446c0a4-photo.jpg"
+  },
+  {
+    "id": "google-keep:document:21778b21",
+    "title": "Grocery list",
+    "createdAt": "2023-12-31T22:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z",
+    "source": {
+      "service": "google-keep",
+      "sourcePath": "Grocery list.json"
+    },
+    "metadata": {
+      "googleKeep": {
+        "labels": [
+          "errands"
+        ],
+        "color": "DEFAULT",
+        "isPinned": true,
+        "isArchived": false,
+        "isTrashed": false
+      }
+    },
+    "type": "document",
+    "content": "Milk\nEggs\nBread",
+    "format": "markdown"
+  },
+  {
+    "id": "google-keep:document:2cde804c",
+    "title": "Trip packing",
+    "createdAt": "2024-01-01T23:00:00.000Z",
+    "updatedAt": "2024-01-02T00:00:00.000Z",
+    "source": {
+      "service": "google-keep",
+      "sourcePath": "Trip packing.json"
+    },
+    "metadata": {
+      "googleKeep": {
+        "labels": [],
+        "color": "BLUE",
+        "isPinned": false,
+        "isArchived": false,
+        "isTrashed": false
+      }
+    },
+    "type": "document",
+    "content": "- [x] Passport\n- [ ] Sunscreen",
+    "format": "markdown",
+    "attachments": [
+      "google-keep:attachment:6446c0a4"
+    ]
+  }
+]

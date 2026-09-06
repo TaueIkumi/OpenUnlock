@@ -1,0 +1,49 @@
+[
+  {
+    "id": "airtable:collection:bd70684f",
+    "title": "Tasks",
+    "source": {
+      "service": "airtable",
+      "sourcePath": "Tasks-Grid view.csv"
+    },
+    "type": "collection"
+  },
+  {
+    "id": "airtable:collection:bd70684f:row-0",
+    "title": "Design homepage",
+    "source": {
+      "service": "airtable",
+      "sourceId": "row-0",
+      "sourcePath": "Tasks-Grid view.csv"
+    },
+    "metadata": {
+      "airtable": {
+        "table": "Tasks",
+        "row": 0
+      }
+    },
+    "type": "document",
+    "content": "- **Status**: In progress\n- **Assignee**: Alice\n- **Notes**: Needs review by Friday\n- **Attachments**: mockup.png (https://dl.airtable.com/.attachments/abc123/mockup.png)",
+    "format": "markdown",
+    "parentId": "airtable:collection:bd70684f"
+  },
+  {
+    "id": "airtable:collection:bd70684f:row-1",
+    "title": "Write copy",
+    "source": {
+      "service": "airtable",
+      "sourceId": "row-1",
+      "sourcePath": "Tasks-Grid view.csv"
+    },
+    "metadata": {
+      "airtable": {
+        "table": "Tasks",
+        "row": 1
+      }
+    },
+    "type": "document",
+    "content": "- **Status**: Done\n- **Assignee**: Bob\n- **Notes**: \n- **Attachments**: ",
+    "format": "markdown",
+    "parentId": "airtable:collection:bd70684f"
+  }
+]

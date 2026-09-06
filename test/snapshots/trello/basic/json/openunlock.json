@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1",
+  "openunlockVersion": "0.1.0",
+  "source": "trello",
+  "entityCounts": {
+    "collection": 2,
+    "document": 2,
+    "message": 1,
+    "person": 2,
+    "relation": 4,
+    "workspace": 1
+  }
+}

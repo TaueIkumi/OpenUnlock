@@ -1,0 +1,10 @@
+{
+  "kind": "tasks#taskList",
+  "id": "list2",
+  "title": "Edge Cases",
+  "items": [
+    { "kind": "tasks#task", "title": "Has no id", "status": "needsAction" },
+    { "kind": "tasks#task", "id": "task3", "status": "needsAction" },
+    { "kind": "tasks#task", "id": "task4", "title": "Orphan subtask", "parent": "task-missing", "status": "needsAction" }
+  ]
+}

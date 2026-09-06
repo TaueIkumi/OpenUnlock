@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Image question",
+    "create_time": 1700200000,
+    "update_time": 1700200060,
+    "conversation_id": "33333333-3333-3333-3333-333333333333",
+    "id": "33333333-3333-3333-3333-333333333333",
+    "current_node": "node-1",
+    "mapping": {
+      "node-root": {
+        "id": "node-root",
+        "message": null,
+        "parent": null,
+        "children": ["node-1"]
+      },
+      "node-1": {
+        "id": "node-1",
+        "message": {
+          "id": "msg-1",
+          "author": { "role": "user", "name": null },
+          "create_time": 1700200000,
+          "content": {
+            "content_type": "multimodal_text",
+            "parts": [{ "content_type": "image_asset_pointer", "asset_pointer": "file-abc123" }]
+          },
+          "status": "finished_successfully"
+        },
+        "parent": "node-root",
+        "children": []
+      }
+    }
+  }
+]

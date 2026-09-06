@@ -1,0 +1,36 @@
+{
+  "id": "board2",
+  "name": "Edge Cases",
+  "lists": [{ "id": "list1", "name": "Backlog" }],
+  "members": [{ "id": "member1", "fullName": "Alice Doe" }],
+  "cards": [
+    {
+      "id": "card1",
+      "name": "Card with attachment and unknown member",
+      "desc": "Has a dangling member reference and an attachment.",
+      "idList": "list1",
+      "idMembers": ["member1", "missing-member"],
+      "attachments": [{ "id": "att1", "name": "spec.pdf", "url": "https://trello.com/att1" }]
+    },
+    {
+      "id": "card2",
+      "name": "Card in a missing list",
+      "desc": "",
+      "idList": "missing-list"
+    }
+  ],
+  "actions": [
+    {
+      "id": "action1",
+      "type": "commentCard",
+      "idMemberCreator": "member1",
+      "data": { "text": "This card is missing.", "card": { "id": "missing-card" } }
+    },
+    {
+      "id": "action2",
+      "type": "commentCard",
+      "idMemberCreator": "missing-member",
+      "data": { "text": "Anonymous-ish comment.", "card": { "id": "card1" } }
+    }
+  ]
+}

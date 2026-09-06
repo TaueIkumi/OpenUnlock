@@ -1,0 +1,11 @@
+{
+  "title": "No timestamp",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "textContent": "This note has no timestamps at all.",
+  "attachments": [
+    { "filePath": "missing.png", "mimetype": "image/png" },
+    { "mimetype": "image/png" }
+  ]
+}

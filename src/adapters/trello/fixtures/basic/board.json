@@ -1,0 +1,73 @@
+{
+  "id": "board1",
+  "name": "Product Roadmap",
+  "desc": "Board description",
+  "closed": false,
+  "url": "https://trello.com/b/board1/product-roadmap",
+  "dateLastActivity": "2024-01-15T10:00:00.000Z",
+  "lists": [
+    { "id": "list1", "name": "To Do", "idBoard": "board1", "closed": false },
+    { "id": "list2", "name": "Done", "idBoard": "board1", "closed": false }
+  ],
+  "members": [
+    { "id": "member1", "fullName": "Alice Doe", "username": "alice" },
+    { "id": "member2", "fullName": "Bob Smith", "username": "bob" }
+  ],
+  "cards": [
+    {
+      "id": "card1",
+      "name": "Design onboarding flow",
+      "desc": "Sketch the new user onboarding.",
+      "idList": "list1",
+      "idBoard": "board1",
+      "closed": false,
+      "due": null,
+      "dateLastActivity": "2024-01-14T09:00:00.000Z",
+      "idMembers": ["member1"],
+      "labels": [{ "id": "label1", "name": "design", "color": "green" }],
+      "shortUrl": "https://trello.com/c/card1",
+      "pos": 1
+    },
+    {
+      "id": "card2",
+      "name": "Ship v1",
+      "desc": "",
+      "idList": "list2",
+      "idBoard": "board1",
+      "closed": false,
+      "due": "2024-02-01T00:00:00.000Z",
+      "dateLastActivity": "2024-01-16T12:00:00.000Z",
+      "idMembers": ["member1", "member2"],
+      "labels": [],
+      "shortUrl": "https://trello.com/c/card2",
+      "pos": 2
+    }
+  ],
+  "checklists": [
+    {
+      "id": "checklist1",
+      "name": "Steps",
+      "idCard": "card1",
+      "checkItems": [
+        { "id": "item1", "name": "Wireframes", "state": "complete" },
+        { "id": "item2", "name": "Review with team", "state": "incomplete" }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "action1",
+      "type": "commentCard",
+      "date": "2024-01-14T10:00:00.000Z",
+      "idMemberCreator": "member2",
+      "data": { "text": "Looks great!", "card": { "id": "card1", "name": "Design onboarding flow" } }
+    },
+    {
+      "id": "action2",
+      "type": "updateCard",
+      "date": "2024-01-15T08:00:00.000Z",
+      "idMemberCreator": "member1",
+      "data": { "card": { "id": "card1", "name": "Design onboarding flow" } }
+    }
+  ]
+}

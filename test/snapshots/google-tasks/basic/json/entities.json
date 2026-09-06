@@ -1,0 +1,65 @@
+[
+  {
+    "id": "google-tasks:collection:list1",
+    "title": "My Tasks",
+    "updatedAt": "2024-01-01T00:00:00.000Z",
+    "source": {
+      "service": "google-tasks",
+      "sourceId": "list1",
+      "sourcePath": "My Tasks.json"
+    },
+    "type": "collection"
+  },
+  {
+    "id": "google-tasks:document:task1",
+    "title": "Plan Q1 roadmap",
+    "updatedAt": "2024-01-02T00:00:00.000Z",
+    "source": {
+      "service": "google-tasks",
+      "sourceId": "task1",
+      "sourcePath": "My Tasks.json"
+    },
+    "metadata": {
+      "googleTasks": {
+        "status": "needsAction",
+        "due": "2024-01-15T00:00:00.000Z",
+        "deleted": false
+      }
+    },
+    "type": "document",
+    "content": "Draft in the shared doc first.",
+    "format": "text",
+    "parentId": "google-tasks:collection:list1"
+  },
+  {
+    "id": "google-tasks:document:task2",
+    "title": "Review roadmap draft",
+    "updatedAt": "2024-01-10T00:00:00.000Z",
+    "source": {
+      "service": "google-tasks",
+      "sourceId": "task2",
+      "sourcePath": "My Tasks.json"
+    },
+    "metadata": {
+      "googleTasks": {
+        "status": "completed",
+        "completed": "2024-01-10T00:00:00.000Z",
+        "deleted": false
+      }
+    },
+    "type": "document",
+    "content": "",
+    "format": "text",
+    "parentId": "google-tasks:collection:list1"
+  },
+  {
+    "id": "google-tasks:relation:sub-task-of:task2:task1",
+    "source": {
+      "service": "google-tasks"
+    },
+    "type": "relation",
+    "fromId": "google-tasks:document:task2",
+    "toId": "google-tasks:document:task1",
+    "relationKind": "sub-task-of"
+  }
+]

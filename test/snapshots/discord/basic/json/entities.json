@@ -1,0 +1,112 @@
+[
+  {
+    "id": "discord:conversation:1001",
+    "title": "general (My Server)",
+    "source": {
+      "service": "discord",
+      "sourceId": "1001"
+    },
+    "metadata": {
+      "discord": {
+        "channelType": 0,
+        "guildId": "g1",
+        "guildName": "My Server"
+      }
+    },
+    "type": "conversation",
+    "participantIds": [
+      "discord:person:self"
+    ],
+    "messageIds": [
+      "discord:message:9001",
+      "discord:message:9002"
+    ]
+  },
+  {
+    "id": "discord:conversation:2002",
+    "title": "DM with bob",
+    "source": {
+      "service": "discord",
+      "sourceId": "2002"
+    },
+    "metadata": {
+      "discord": {
+        "channelType": 1
+      }
+    },
+    "type": "conversation",
+    "participantIds": [
+      "discord:person:self"
+    ],
+    "messageIds": [
+      "discord:message:9101"
+    ]
+  },
+  {
+    "id": "discord:message:9001",
+    "createdAt": "2024-02-01T09:00:00.000Z",
+    "source": {
+      "service": "discord",
+      "sourceId": "9001",
+      "sourcePath": "messages/c1001"
+    },
+    "metadata": {
+      "discord": {}
+    },
+    "type": "message",
+    "conversationId": "discord:conversation:1001",
+    "authorId": "discord:person:self",
+    "content": "Good morning everyone!"
+  },
+  {
+    "id": "discord:message:9002",
+    "createdAt": "2024-02-01T09:05:00.000Z",
+    "source": {
+      "service": "discord",
+      "sourceId": "9002",
+      "sourcePath": "messages/c1001"
+    },
+    "metadata": {
+      "discord": {
+        "attachmentUrls": [
+          "https://cdn.discordapp.com/attachments/1001/9002/notes.pdf"
+        ]
+      }
+    },
+    "type": "message",
+    "conversationId": "discord:conversation:1001",
+    "authorId": "discord:person:self",
+    "content": "Here's the doc I mentioned"
+  },
+  {
+    "id": "discord:message:9101",
+    "createdAt": "2024-02-02T14:30:00.000Z",
+    "source": {
+      "service": "discord",
+      "sourceId": "9101",
+      "sourcePath": "messages/c2002"
+    },
+    "metadata": {
+      "discord": {}
+    },
+    "type": "message",
+    "conversationId": "discord:conversation:2002",
+    "authorId": "discord:person:self",
+    "content": "See you at 5?"
+  },
+  {
+    "id": "discord:person:self",
+    "source": {
+      "service": "discord",
+      "sourceId": "5551112222"
+    },
+    "metadata": {
+      "discord": {
+        "isAccountOwner": true
+      }
+    },
+    "type": "person",
+    "displayName": "alice",
+    "email": "alice@example.com"
+  }
+]

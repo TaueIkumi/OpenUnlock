@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1",
+  "openunlockVersion": "0.1.0",
+  "source": "airtable",
+  "entityCounts": {
+    "collection": 1,
+    "document": 2
+  }
+}

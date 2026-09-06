@@ -1,0 +1,14 @@
+[
+  {
+    "ID": "9001",
+    "Timestamp": "2024-02-01 09:00:00",
+    "Contents": "Good morning everyone!",
+    "Attachments": ""
+  },
+  {
+    "ID": "9002",
+    "Timestamp": "2024-02-01 09:05:00",
+    "Contents": "Here's the doc I mentioned",
+    "Attachments": "https://cdn.discordapp.com/attachments/1001/9002/notes.pdf"
+  }
+]

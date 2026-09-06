@@ -1,0 +1,11 @@
+{
+  "color": "DEFAULT",
+  "isTrashed": false,
+  "isPinned": true,
+  "isArchived": false,
+  "textContent": "Milk\nEggs\nBread",
+  "title": "Grocery list",
+  "userEditedTimestampUsec": 1704067200000000,
+  "createdTimestampUsec": 1704060000000000,
+  "labels": [{ "name": "errands" }]
+}

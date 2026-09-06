@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "conv-2",
+    "name": "Edge cases",
+    "created_at": "2024-03-02T09:00:00.000000+00:00",
+    "updated_at": "2024-03-02T09:02:00.000000+00:00",
+    "future_field": "future-value",
+    "chat_messages": [
+      {
+        "uuid": "msg-a",
+        "text": "Here's a file",
+        "sender": "human",
+        "attachments": [{ "file_name": "notes.txt", "file_size": 12 }]
+      },
+      {
+        "uuid": "msg-b",
+        "content": [{ "type": "tool_use", "name": "search" }],
+        "sender": "assistant",
+        "created_at": "2024-03-02T09:02:00.000000+00:00"
+      }
+    ]
+  },
+  {
+    "uuid": "conv-3",
+    "name": "Empty conversation",
+    "chat_messages": []
+  }
+]

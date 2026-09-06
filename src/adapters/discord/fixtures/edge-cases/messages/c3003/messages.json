@@ -1,0 +1,5 @@
+[
+  { "ID": "1", "Timestamp": "2024-03-01 00:00:00", "Contents": "has id and timestamp" },
+  { "Timestamp": "2024-03-01 00:01:00", "Contents": "missing id, should be dropped" },
+  { "ID": "3", "Contents": "missing timestamp, should be kept" }
+]

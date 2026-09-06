@@ -1,0 +1,92 @@
+[
+  {
+    "id": "chatgpt:conversation:11111111-1111-1111-1111-111111111111",
+    "title": "Weekend trip ideas",
+    "createdAt": "2023-11-14T22:13:20.000Z",
+    "updatedAt": "2023-11-14T22:15:20.000Z",
+    "source": {
+      "service": "chatgpt",
+      "sourceId": "11111111-1111-1111-1111-111111111111"
+    },
+    "metadata": {
+      "chatgpt": {
+        "currentNode": "node-2",
+        "branchCount": 2
+      }
+    },
+    "type": "conversation",
+    "participantIds": [
+      "chatgpt:person:user",
+      "chatgpt:person:assistant"
+    ],
+    "messageIds": [
+      "chatgpt:message:msg-1",
+      "chatgpt:message:msg-2"
+    ]
+  },
+  {
+    "id": "chatgpt:message:msg-1",
+    "createdAt": "2023-11-14T22:13:20.000Z",
+    "source": {
+      "service": "chatgpt",
+      "sourceId": "msg-1"
+    },
+    "metadata": {
+      "chatgpt": {
+        "nodeId": "node-1",
+        "status": "finished_successfully",
+        "contentType": "text"
+      }
+    },
+    "type": "message",
+    "conversationId": "chatgpt:conversation:11111111-1111-1111-1111-111111111111",
+    "authorId": "chatgpt:person:user",
+    "content": "Where should I go this weekend?"
+  },
+  {
+    "id": "chatgpt:message:msg-2",
+    "createdAt": "2023-11-14T22:14:20.000Z",
+    "source": {
+      "service": "chatgpt",
+      "sourceId": "msg-2"
+    },
+    "metadata": {
+      "chatgpt": {
+        "nodeId": "node-2",
+        "status": "finished_successfully",
+        "contentType": "text"
+      }
+    },
+    "type": "message",
+    "conversationId": "chatgpt:conversation:11111111-1111-1111-1111-111111111111",
+    "authorId": "chatgpt:person:assistant",
+    "parentMessageId": "chatgpt:message:msg-1",
+    "content": "How about a coastal hike?"
+  },
+  {
+    "id": "chatgpt:person:assistant",
+    "source": {
+      "service": "chatgpt"
+    },
+    "metadata": {
+      "chatgpt": {
+        "role": "assistant"
+      }
+    },
+    "type": "person",
+    "displayName": "assistant"
+  },
+  {
+    "id": "chatgpt:person:user",
+    "source": {
+      "service": "chatgpt"
+    },
+    "metadata": {
+      "chatgpt": {
+        "role": "user"
+      }
+    },
+    "type": "person",
+    "displayName": "user"
+  }
+]

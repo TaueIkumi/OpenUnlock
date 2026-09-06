@@ -1,0 +1,91 @@
+[
+  {
+    "id": "linear:collection:engineering",
+    "title": "Engineering",
+    "source": {
+      "service": "linear"
+    },
+    "type": "collection"
+  },
+  {
+    "id": "linear:document:ENG-40",
+    "title": "Set up CI pipeline",
+    "createdAt": "2024-01-05T09:00:00.000Z",
+    "updatedAt": "2024-01-10T12:00:00.000Z",
+    "source": {
+      "service": "linear",
+      "sourceId": "ENG-40",
+      "sourcePath": "https://linear.app/acme/issue/ENG-40"
+    },
+    "metadata": {
+      "linear": {
+        "status": "Done",
+        "priority": "High",
+        "assignee": "Alice Doe",
+        "labels": [
+          "infra",
+          "ci"
+        ],
+        "cycle": "Cycle 12",
+        "project": "Platform"
+      }
+    },
+    "type": "document",
+    "content": "Configure GitHub Actions for lint, test, build.",
+    "format": "markdown",
+    "parentId": "linear:collection:engineering"
+  },
+  {
+    "id": "linear:document:ENG-43",
+    "title": "Add retry logic to CI",
+    "createdAt": "2024-01-06T09:00:00.000Z",
+    "updatedAt": "2024-01-11T09:00:00.000Z",
+    "source": {
+      "service": "linear",
+      "sourceId": "ENG-43",
+      "sourcePath": "https://linear.app/acme/issue/ENG-43"
+    },
+    "metadata": {
+      "linear": {
+        "status": "In Progress",
+        "priority": "Medium",
+        "assignee": "Bob Smith",
+        "labels": [
+          "ci"
+        ],
+        "cycle": "Cycle 12",
+        "project": "Platform"
+      }
+    },
+    "type": "document",
+    "content": "Retry flaky steps up to 3 times.",
+    "format": "markdown",
+    "parentId": "linear:collection:engineering"
+  },
+  {
+    "id": "linear:person:alice-doe",
+    "source": {
+      "service": "linear"
+    },
+    "type": "person",
+    "displayName": "Alice Doe"
+  },
+  {
+    "id": "linear:person:bob-smith",
+    "source": {
+      "service": "linear"
+    },
+    "type": "person",
+    "displayName": "Bob Smith"
+  },
+  {
+    "id": "linear:relation:sub-issue-of:ENG-43:ENG-40",
+    "source": {
+      "service": "linear"
+    },
+    "type": "relation",
+    "fromId": "linear:document:ENG-43",
+    "toId": "linear:document:ENG-40",
+    "relationKind": "sub-issue-of"
+  }
+]

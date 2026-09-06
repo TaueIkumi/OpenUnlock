@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1",
+  "openunlockVersion": "0.1.0",
+  "source": "linear",
+  "entityCounts": {
+    "collection": 1,
+    "document": 2,
+    "person": 2,
+    "relation": 1
+  }
+}

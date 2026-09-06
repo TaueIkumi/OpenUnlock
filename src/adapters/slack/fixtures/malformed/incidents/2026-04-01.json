@@ -1,0 +1,4 @@
+[
+  { "type": "message", "user": "U030", "text": "Investigating an outage.", "ts": "1772496000.000100" },
+  { "type": "message", "text": "orphaned message with no author", "ts": "1772496060.000200" }
+]

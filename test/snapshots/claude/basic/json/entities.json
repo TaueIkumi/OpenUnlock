@@ -1,0 +1,91 @@
+[
+  {
+    "id": "claude:conversation:conv-1",
+    "title": "Trip planning",
+    "createdAt": "2024-03-01T10:00:00.000Z",
+    "updatedAt": "2024-03-01T10:05:00.000Z",
+    "source": {
+      "service": "claude",
+      "sourceId": "conv-1"
+    },
+    "metadata": {
+      "claude": {}
+    },
+    "type": "conversation",
+    "participantIds": [
+      "claude:person:human",
+      "claude:person:assistant"
+    ],
+    "messageIds": [
+      "claude:message:msg-1",
+      "claude:message:msg-2"
+    ]
+  },
+  {
+    "id": "claude:message:msg-1",
+    "createdAt": "2024-03-01T10:00:00.000Z",
+    "updatedAt": "2024-03-01T10:00:00.000Z",
+    "source": {
+      "service": "claude",
+      "sourceId": "msg-1"
+    },
+    "metadata": {
+      "claude": {
+        "sender": "human",
+        "attachments": [],
+        "fileCount": 0
+      }
+    },
+    "type": "message",
+    "conversationId": "claude:conversation:conv-1",
+    "authorId": "claude:person:human",
+    "content": "What should I pack for a trip to Kyoto in April?"
+  },
+  {
+    "id": "claude:message:msg-2",
+    "createdAt": "2024-03-01T10:05:00.000Z",
+    "updatedAt": "2024-03-01T10:05:00.000Z",
+    "source": {
+      "service": "claude",
+      "sourceId": "msg-2"
+    },
+    "metadata": {
+      "claude": {
+        "sender": "assistant",
+        "attachments": [],
+        "fileCount": 0
+      }
+    },
+    "type": "message",
+    "conversationId": "claude:conversation:conv-1",
+    "authorId": "claude:person:assistant",
+    "parentMessageId": "claude:message:msg-1",
+    "content": "Pack layers, a light rain jacket, and comfortable shoes."
+  },
+  {
+    "id": "claude:person:assistant",
+    "source": {
+      "service": "claude"
+    },
+    "metadata": {
+      "claude": {
+        "sender": "assistant"
+      }
+    },
+    "type": "person",
+    "displayName": "Claude"
+  },
+  {
+    "id": "claude:person:human",
+    "source": {
+      "service": "claude"
+    },
+    "metadata": {
+      "claude": {
+        "sender": "human"
+      }
+    },
+    "type": "person",
+    "displayName": "You"
+  }
+]

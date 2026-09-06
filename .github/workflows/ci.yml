@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 18.x is the floor declared in package.json's "engines" field.
+        # 22.x+ additionally exercises the sqlite exporter, which needs
+        # Node's built-in node:sqlite (22.5+) and degrades to a skipped
+        # test suite, not a failure, below that (see
+        # test/integration/sqlite-export.test.ts).
+        node-version: ["18.x", "20.x", "22.x", "24.x"]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+
+      - name: Verify the built CLI runs
+        run: node dist/cli/index.js --help
+
+      - name: Verify the bin script is executable (regression check)
+        # A published version once shipped this file as mode 644 (tsc
+        # never sets the executable bit), which broke `npx openunlock`
+        # with "Permission denied" — see package.json's postbuild script.
+        run: test -x dist/cli/index.js
+
+      - name: Verify no test files leak into the npm package (regression check)
+        # An earlier version's "files" field shipped every co-located
+        # *.test.ts's compiled output too (~37% of the tarball) — see
+        # tsconfig.build.json. Only needs to run once.
+        if: matrix.node-version == '22.x'
+        run: |
+          npm pack --dry-run 2>&1 | tee /tmp/pack-output.txt
+          if grep -q '\.test\.' /tmp/pack-output.txt; then
+            echo "::error::Test files found in the npm package tarball"
+            exit 1
+          fi

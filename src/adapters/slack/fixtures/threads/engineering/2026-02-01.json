@@ -1,0 +1,24 @@
+[
+  {
+    "type": "message",
+    "user": "U010",
+    "text": "Build is failing on main, anyone looking?",
+    "ts": "1769904000.000100",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U011",
+    "text": "On it.",
+    "ts": "1769904060.000200",
+    "thread_ts": "1769904000.000100"
+  },
+  {
+    "type": "message",
+    "user": "U011",
+    "text": "Fixed, was a flaky test.",
+    "ts": "1769904300.000300",
+    "thread_ts": "1769904000.000100",
+    "reactions": [{ "name": "+1", "users": ["U010"], "count": 1 }]
+  }
+]

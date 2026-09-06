@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240115T120000Z" application="Evernote" version="10.68.7">
+<note>
+<title>Trip Planning</title>
+<content><![CDATA[<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note><div>Pack sunscreen and a map.</div><en-media hash="e44e7ecfec99356632c13cd3eaa3e250" type="image/png"/></en-note>]]></content>
+<created>20240110T090000Z</created>
+<updated>20240112T100000Z</updated>
+<tag>travel</tag>
+<tag>ideas</tag>
+<note-attributes>
+<author>Alice Doe</author>
+<source-url>https://example.com/trip</source-url>
+</note-attributes>
+<resource>
+<data encoding="base64">
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=
+</data>
+<mime>image/png</mime>
+<resource-attributes>
+<file-name>map.png</file-name>
+</resource-attributes>
+</resource>
+</note>
+<note>
+<title>Grocery List</title>
+<content><![CDATA[<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note><div>Milk, eggs, bread.</div></en-note>]]></content>
+<created>20240111T080000Z</created>
+<updated>20240111T080000Z</updated>
+</note>
+</en-export>

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "evernote:attachment:93e54d4e",
+    "source": {
+      "service": "evernote",
+      "sourcePath": "Personal Notes.enex"
+    },
+    "type": "attachment",
+    "filename": "map.png",
+    "mediaType": "image/png",
+    "size": 68,
+    "checksum": "431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460",
+    "localPath": "attachments/93e54d4e-map.png"
+  },
+  {
+    "id": "evernote:collection:90ecce46",
+    "title": "Personal Notes",
+    "source": {
+      "service": "evernote",
+      "sourcePath": "Personal Notes.enex"
+    },
+    "metadata": {
+      "evernote": {
+        "exportDate": "20240115T120000Z"
+      }
+    },
+    "type": "collection"
+  },
+  {
+    "id": "evernote:document:1cb61026",
+    "title": "Trip Planning",
+    "createdAt": "2024-01-10T09:00:00.000Z",
+    "updatedAt": "2024-01-12T10:00:00.000Z",
+    "source": {
+      "service": "evernote",
+      "sourcePath": "Personal Notes.enex"
+    },
+    "metadata": {
+      "evernote": {
+        "tags": [
+          "travel",
+          "ideas"
+        ],
+        "author": "Alice Doe",
+        "sourceUrl": "https://example.com/trip"
+      }
+    },
+    "type": "document",
+    "content": "<div>Pack sunscreen and a map.</div>![map.png](openunlock://entity/evernote:attachment:93e54d4e)",
+    "format": "html",
+    "parentId": "evernote:collection:90ecce46",
+    "attachments": [
+      "evernote:attachment:93e54d4e"
+    ]
+  },
+  {
+    "id": "evernote:document:523b2bc0",
+    "title": "Grocery List",
+    "createdAt": "2024-01-11T08:00:00.000Z",
+    "updatedAt": "2024-01-11T08:00:00.000Z",
+    "source": {
+      "service": "evernote",
+      "sourcePath": "Personal Notes.enex"
+    },
+    "metadata": {
+      "evernote": {
+        "tags": []
+      }
+    },
+    "type": "document",
+    "content": "<div>Milk, eggs, bread.</div>",
+    "format": "html",
+    "parentId": "evernote:collection:90ecce46"
+  },
+  {
+    "id": "evernote:person:d5cf157c",
+    "source": {
+      "service": "evernote"
+    },
+    "type": "person",
+    "displayName": "Alice Doe"
+  }
+]

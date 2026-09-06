@@ -1,0 +1,6 @@
+{"type":"version","version":1}
+{"type":"team","team":{"name":"slack-import","display_name":"slack-import","type":"O"}}
+{"type":"channel","channel":{"team":"slack-import","name":"engineering-a71d7db4","display_name":"engineering","type":"O"}}
+{"type":"user","user":{"username":"carollee-e5136a59","email":"carollee-e5136a59@imported.invalid","password":"ChangeMe1234!ImportPlaceholder","teams":[{"name":"slack-import","channels":[{"name":"engineering-a71d7db4"}]}]}}
+{"type":"user","user":{"username":"davekim-43dab2cf","email":"davekim-43dab2cf@imported.invalid","password":"ChangeMe1234!ImportPlaceholder","teams":[{"name":"slack-import","channels":[{"name":"engineering-a71d7db4"}]}]}}
+{"type":"post","post":{"team":"slack-import","channel":"engineering-a71d7db4","user":"carollee-e5136a59","message":"Build is failing on main, anyone looking?","create_at":1769904000000,"replies":[{"user":"davekim-43dab2cf","message":"On it.","create_at":1769904060000},{"user":"davekim-43dab2cf","message":"Fixed, was a flaky test.","create_at":1769904300000}]}}

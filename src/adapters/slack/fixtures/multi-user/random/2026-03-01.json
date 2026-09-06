@@ -1,0 +1,4 @@
+[
+  { "type": "message", "user": "U020", "text": "Happy Monday everyone!", "ts": "1772323200.000100" },
+  { "type": "message", "user": "U021", "text": "Same to you <@U020>", "ts": "1772323260.000200" }
+]

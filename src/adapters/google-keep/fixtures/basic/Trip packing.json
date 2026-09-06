@@ -1,0 +1,15 @@
+{
+  "color": "BLUE",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "title": "Trip packing",
+  "listContent": [
+    { "text": "Passport", "isChecked": true },
+    { "text": "Sunscreen", "isChecked": false }
+  ],
+  "userEditedTimestampUsec": 1704153600000000,
+  "createdTimestampUsec": 1704150000000000,
+  "labels": [],
+  "attachments": [{ "filePath": "photo.jpg", "mimetype": "image/jpeg" }]
+}

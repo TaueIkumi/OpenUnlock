@@ -1,0 +1,4 @@
+[
+  { "id": "U001", "name": "alice", "real_name": "Alice Doe", "profile": { "display_name": "alice", "email": "alice@example.com" } },
+  { "id": "U002", "name": "bob", "real_name": "Bob Smith", "profile": { "display_name": "bob" } }
+]

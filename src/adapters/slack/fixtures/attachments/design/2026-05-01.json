@@ -1,0 +1,17 @@
+[
+  {
+    "type": "message",
+    "user": "U040",
+    "text": "Here's the new mockup",
+    "ts": "1775001600.000100",
+    "files": [
+      { "id": "F001", "name": "mockup.png", "mimetype": "image/png", "size": 204800, "url_private": "https://files.slack.com/files-pri/T000-F001/mockup.png" }
+    ]
+  },
+  {
+    "type": "message",
+    "bot_id": "B001",
+    "text": "Deployed to staging",
+    "ts": "1775001660.000200"
+  }
+]

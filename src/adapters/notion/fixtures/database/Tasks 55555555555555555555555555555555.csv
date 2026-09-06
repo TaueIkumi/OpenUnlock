@@ -1,0 +1,3 @@
+Name,Status,Notes
+Write adapter,Done,"Includes CSV parsing, quoted, with a comma"
+Write tests,In Progress,

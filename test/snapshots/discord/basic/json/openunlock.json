@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1",
+  "openunlockVersion": "0.1.0",
+  "source": "discord",
+  "entityCounts": {
+    "conversation": 2,
+    "message": 3,
+    "person": 1
+  }
+}
