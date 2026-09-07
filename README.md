@@ -81,8 +81,8 @@ step — useful for trying an in-progress change, or for contributing.
 
 ## Supported sources → destinations
 
-**11 sources in:** ChatGPT · Notion · Slack · Trello · Evernote · Discord ·
-Claude · Linear · Airtable · Google Keep · Google Tasks
+**12 sources in:** ChatGPT · Notion · Slack · Trello · Evernote · Discord ·
+Claude · Linear · Airtable · Google Keep · Google Tasks · Gemini Gems
 
 **8 formats out:** Markdown · JSON · JSONL (JSON, one record per line) ·
 normalized filesystem tree (one file per item) · SQLite (a queryable

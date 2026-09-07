@@ -11,6 +11,7 @@ import { linearAdapter } from "../adapters/linear/index.js";
 import { airtableAdapter } from "../adapters/airtable/index.js";
 import { googleKeepAdapter } from "../adapters/google-keep/index.js";
 import { googleTasksAdapter } from "../adapters/google-tasks/index.js";
+import { geminiGemsAdapter } from "../adapters/gemini-gems/index.js";
 import { markdownExporter } from "../exporters/markdown/index.js";
 import { jsonExporter } from "../exporters/json/index.js";
 import { jsonlExporter } from "../exporters/jsonl/index.js";
@@ -32,6 +33,7 @@ export const adapters: readonly SourceAdapter[] = [
   airtableAdapter,
   googleKeepAdapter,
   googleTasksAdapter,
+  geminiGemsAdapter,
 ];
 
 export const exporters: readonly Exporter[] = [

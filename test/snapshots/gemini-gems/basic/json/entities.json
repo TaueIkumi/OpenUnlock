@@ -1,0 +1,37 @@
+[
+  {
+    "id": "gemini-gems:document:0652677d",
+    "title": "Travel Planner",
+    "source": {
+      "service": "gemini-gems",
+      "sourcePath": "gemini_gems_data.html"
+    },
+    "metadata": {
+      "geminiGems": {}
+    },
+    "type": "document",
+    "content": "Plan a 3-day itinerary for the city I name, favoring walkable neighborhoods.",
+    "format": "text"
+  },
+  {
+    "id": "gemini-gems:document:1adad7f4",
+    "title": "Recipe Helper",
+    "source": {
+      "service": "gemini-gems",
+      "sourcePath": "gemini_gems_data.html"
+    },
+    "metadata": {
+      "geminiGems": {
+        "files": [
+          {
+            "url": "https://contribution.usercontent.google.com/download?c=example123&filename=pantry-list.pdf&opi=1",
+            "filename": "pantry-list.pdf"
+          }
+        ]
+      }
+    },
+    "type": "document",
+    "content": "Suggest a dinner recipe based on the ingredients I list, and keep it under 30 minutes.",
+    "format": "text"
+  }
+]

@@ -439,6 +439,50 @@ which is arbitrary).
 - ✗ a `parent` reference to a task not present in the same list/export is
   reported as `missing-reference`, not silently dropped or guessed at.
 
+## Gemini Gems
+
+**Accepted input:** A [Google Takeout](https://takeout.google.com) export
+of the "Gemini" product — specifically `gemini_gems_data.html`. A "Gem" is
+Gemini's equivalent of a ChatGPT Custom GPT: a name, a block of custom
+instructions, and optionally a list of attached files.
+
+**An important limitation, found by testing against a real account:** as
+of this writing, Google Takeout's Gemini export does **not** include
+conversation history at all — only Gems and (in every real sample seen)
+an empty scheduled-actions file. There is currently no official way to
+export Gemini chat transcripts, unlike ChatGPT or Claude. This adapter is
+scoped to exactly what's actually exportable, per AGENT.md section 32's
+guidance against guessing at an unexplored format.
+
+**A structural/i18n note:** this export is HTML, not JSON, and its field
+*labels* ("名前:", "カスタム指示:" in a Japanese-language account) are in
+the Google account's own display language. Detection and parsing never
+read label text — only the *position* of each `<b>...:</b>` marker within
+a Gem's fragment (1st = name, 2nd = instructions, optional 3rd = a file
+list) — so this works regardless of the account's language, without
+needing to enumerate every language Google might use.
+
+**Supported:**
+
+- ✓ each Gem as a `Document` entity (`format: "text"`) — name becomes the
+  title, custom instructions become the content
+
+**Partially supported:**
+
+- △ a Gem's attached files are referenced by an authenticated
+  Google-hosted URL (`contribution.usercontent.google.com` or similar),
+  never included as bytes — preserved in `metadata.geminiGems.files` and
+  reported as `lossy-conversion`.
+- △ `gemini_scheduled_actions_data.html`, if present and non-empty, is
+  flagged as `unsupported` rather than parsed — every real sample seen so
+  far has been empty, so its schema when populated is still unexplored;
+  guessing at it would risk misrepresenting the data.
+
+**Unsupported:**
+
+- ✗ conversation history — not present in the export to begin with (see
+  above), not a gap in this adapter.
+
 ## Exporters
 
 | Exporter   | Output                                                          |
