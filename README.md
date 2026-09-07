@@ -22,6 +22,9 @@ database — using nothing but your own computer.
 
 **Local-first. No account. No cloud. No telemetry.**
 
+📺 **[Watch the launch video](./docs/media/launch-video.mp4)** — a quick
+tour of why OpenUnlock exists and what it does.
+
 ![OpenUnlock demo: converting a ChatGPT export into readable Markdown and validating it](./docs/media/demo.gif)
 
 ```bash
