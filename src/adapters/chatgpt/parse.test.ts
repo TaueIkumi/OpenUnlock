@@ -49,6 +49,24 @@ describe("parseChatGpt", () => {
     expect(diagnostics.all().some((d) => d.category === "unsupported")).toBe(true);
   });
 
+  it("renders thoughts/reasoning_recap messages as readable text (reasoning fixture)", async () => {
+    // Regression coverage for a real-world gap: a reasoning-model export
+    // had ~half its messages as "thoughts"/"reasoning_recap", which used
+    // to be dropped to empty content with an "unsupported" diagnostic.
+    const { entities, diagnostics } = await collect("reasoning");
+    const messages = entities.filter((e) => e.type === "message");
+    expect(messages).toHaveLength(4);
+
+    const thoughtsMessage = messages.find((m) => "content" in m && m.content.includes("global counter"));
+    expect(thoughtsMessage).toBeDefined();
+
+    const recapMessage = messages.find((m) => "content" in m && m.content === "Thought for 8 seconds");
+    expect(recapMessage).toBeDefined();
+
+    expect(diagnostics.all().some((d) => d.category === "unsupported")).toBe(false);
+    expect(diagnostics.hasErrors()).toBe(false);
+  });
+
   it("parses the unknown-fields fixture without dropping vendor data", async () => {
     const { entities } = await collect("unknown-fields");
     const conversation = entities.find((e) => e.type === "conversation");

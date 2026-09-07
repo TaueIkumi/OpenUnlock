@@ -12,6 +12,15 @@ the extracted directory), specifically `conversations.json`.
 - ✓ author roles (user / assistant / system) as `Person` entities
 - ✓ unknown/future top-level conversation fields (preserved in
   `metadata.chatgpt.extraFields`)
+- ✓ reasoning-model content (`thoughts` and `reasoning_recap` content
+  types, used by o1/o3-style extended thinking — undocumented by OpenAI,
+  found by running this adapter against a real export). A `thoughts`
+  message's chain-of-thought steps are joined into readable text (each
+  step's full content, falling back to its one-line summary); the raw
+  shape is still kept in `metadata.chatgpt.rawContent` as a safety net.
+  Before this, these accounted for as much as **half the messages** in a
+  real reasoning-heavy export, all silently reduced to an empty,
+  "unsupported" placeholder.
 
 **Partially supported:**
 

@@ -10,10 +10,20 @@ export interface ChatGptAuthor {
   metadata?: Record<string, unknown>;
 }
 
+export interface ChatGptThought {
+  summary?: string;
+  content?: string;
+  finished?: boolean;
+}
+
 export interface ChatGptContent {
   content_type?: string;
   parts?: unknown[];
   text?: string;
+  /** Present on content_type "reasoning_recap": a short plain-text summary. */
+  content?: string;
+  /** Present on content_type "thoughts": a reasoning model's chain-of-thought steps. */
+  thoughts?: ChatGptThought[];
 }
 
 export interface ChatGptMessage {

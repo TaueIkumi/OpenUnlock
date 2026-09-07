@@ -2,9 +2,24 @@ import type { DiagnosticCollector } from "../../core/diagnostics.js";
 import type { Conversation, Message, Person } from "../../core/canonical/types.js";
 import { normalizeTimestamp } from "../../utils/dates.js";
 import { slugify } from "../../utils/filenames.js";
-import type { ChatGptConversation, ChatGptNode } from "./parse-source.js";
+import type { ChatGptConversation, ChatGptNode, ChatGptThought } from "./parse-source.js";
 
-const SUPPORTED_CONTENT_TYPES = new Set(["text"]);
+/**
+ * "thoughts" and "reasoning_recap" are reasoning-model content types
+ * (o1/o3-style extended thinking) — not documented anywhere by OpenAI,
+ * found by running this adapter against a real export that used them.
+ * Both carry real plain text, just shaped differently from "text", so
+ * they're rendered rather than treated as unsupported.
+ */
+const SUPPORTED_CONTENT_TYPES = new Set(["text", "reasoning_recap", "thoughts"]);
+
+/** Prefer a thought step's full content; fall back to its one-line summary. */
+function renderThoughts(thoughts: ChatGptThought[]): string {
+  return thoughts
+    .map((t) => (t.content?.trim() ? t.content : (t.summary ?? "")))
+    .filter((s) => s.trim().length > 0)
+    .join("\n\n");
+}
 
 export interface NormalizedConversation {
   conversation: Conversation;
@@ -35,6 +50,19 @@ function renderContent(
       ref,
     );
     return { content: "", unsupported: true };
+  }
+
+  if (contentType === "reasoning_recap") {
+    return { content: (content?.content ?? "").trim(), unsupported: false };
+  }
+
+  if (contentType === "thoughts") {
+    const text = renderThoughts(content?.thoughts ?? []).trim();
+    if (text.length === 0) {
+      diagnostics.unsupported("Message has no readable thought summary or content", ref);
+      return { content: "", unsupported: true };
+    }
+    return { content: text, unsupported: false };
   }
 
   const parts = content?.parts ?? [];
@@ -149,7 +177,12 @@ export function normalizeConversation(
           nodeId: node.id,
           status: msg.status,
           contentType: msg.content?.content_type,
-          ...(unsupported ? { rawContent: msg.content } : {}),
+          // "thoughts" nests further structure (e.g. per-step "chunks")
+          // our rendering doesn't fully unpack — keep the raw shape as a
+          // safety net even though it's treated as supported.
+          ...(unsupported || msg.content?.content_type === "thoughts"
+            ? { rawContent: msg.content }
+            : {}),
         },
       },
     };

@@ -147,6 +147,93 @@ describe("normalizeConversation", () => {
     expect(diagnostics.all().some((d) => d.category === "malformed-source")).toBe(true);
   });
 
+  it("renders a reasoning_recap message's content as plain text", () => {
+    // Found by running this adapter against a real export from a reasoning
+    // model (o1/o3-style extended thinking) — not documented by OpenAI.
+    const raw: ChatGptConversation = {
+      conversation_id: "conv-6",
+      mapping: {
+        n1: {
+          id: "n1",
+          message: {
+            id: "m1",
+            author: { role: "assistant" },
+            create_time: 100,
+            content: { content_type: "reasoning_recap", content: "Thought for 12 seconds" },
+          },
+          parent: null,
+          children: [],
+        },
+      },
+    };
+
+    const diagnostics = new DiagnosticCollector();
+    const result = normalizeConversation(raw, 0, diagnostics);
+
+    expect(result.messages[0]?.content).toBe("Thought for 12 seconds");
+    expect(diagnostics.all().some((d) => d.category === "unsupported")).toBe(false);
+  });
+
+  it("renders a thoughts message by joining each step's content or summary", () => {
+    const raw: ChatGptConversation = {
+      conversation_id: "conv-7",
+      mapping: {
+        n1: {
+          id: "n1",
+          message: {
+            id: "m1",
+            author: { role: "assistant" },
+            create_time: 100,
+            content: {
+              content_type: "thoughts",
+              thoughts: [
+                { summary: "Considering the request", content: "", finished: true },
+                { summary: "Drafting a reply", content: "Here is the full reasoning text.", finished: true },
+              ],
+            },
+          },
+          parent: null,
+          children: [],
+        },
+      },
+    };
+
+    const diagnostics = new DiagnosticCollector();
+    const result = normalizeConversation(raw, 0, diagnostics);
+
+    expect(result.messages[0]?.content).toBe(
+      "Considering the request\n\nHere is the full reasoning text.",
+    );
+    // The raw shape is kept as a safety net even though it's rendered.
+    expect(result.messages[0]?.metadata?.chatgpt).toHaveProperty("rawContent");
+    expect(diagnostics.all().some((d) => d.category === "unsupported")).toBe(false);
+  });
+
+  it("reports thoughts with no readable summary or content as unsupported", () => {
+    const raw: ChatGptConversation = {
+      conversation_id: "conv-8",
+      mapping: {
+        n1: {
+          id: "n1",
+          message: {
+            id: "m1",
+            author: { role: "assistant" },
+            create_time: 100,
+            content: { content_type: "thoughts", thoughts: [{ finished: true }] },
+          },
+          parent: null,
+          children: [],
+        },
+      },
+    };
+
+    const diagnostics = new DiagnosticCollector();
+    const result = normalizeConversation(raw, 0, diagnostics);
+
+    expect(result.messages[0]?.content).toBe("");
+    expect(diagnostics.all().some((d) => d.category === "unsupported")).toBe(true);
+  });
+
   it("preserves unknown top-level fields in metadata", () => {
     const raw: ChatGptConversation = {
       conversation_id: "conv-5",
